@@ -31,7 +31,7 @@ CREATE DATABASE test_db
 ```
 In the above command, test_db is a name for the database as an example.
 
-3. Run these sql script files and create tables. For PostgreSQL database use
+3. Run these sql script files and create tables. 
 
 ```
 CREATE TABLE IF NOT EXISTS countries (
