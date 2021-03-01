@@ -1,6 +1,6 @@
 # Spring Boot Web Application #
 This repository contains a simplified version of Spring Boot web application made for the purpose of assessment.
-## Description of the 
+## Description of the assessment
 The task is to write a production-ready code that retrieves the following information given 3 CSV files [which contain data for countries, airports and runway information]:
 - Runways for each airport given a country code or country name [country name is chosen as input 
   for this application].
