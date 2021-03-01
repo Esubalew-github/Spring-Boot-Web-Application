@@ -1,0 +1,44 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+  <title> Query Page </title>
+  <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+  <link href="style.css" rel="stylesheet">
+</head>
+<body>
+<form action="/country" method="get">
+  <label>
+    Country name:
+    <input type="text" name="name" />
+  </label>
+  <input type="submit" value="Search"/>
+</form>
+<div id="country" th:if="${country != null}">
+  Country given: <b th:text="${country.name}"></b>
+
+  <h2>List of airports and runways for each airport </h2>
+  <table>
+    <thead>
+    <tr>
+      <th>Name of airport</th>
+      <th>List of runways</th>
+    </tr>
+    </thead>
+    <tbody>
+    <th:block th:each="airport : ${country.airports}">
+      <tr>
+        <td th:text="${airport.name}"></td>
+        <td th:text="${airport.runways}"></td>
+      </tr>
+    </th:block>
+    </tbody>
+  </table>
+</div>
+<div id="country-not-found">
+  <div th:if="${not #lists.isEmpty(suggestions)}">
+    <p> Country not found. Do you mean <a th:each="suggestion : ${suggestions}" th:href="@{/country(name=${suggestion})}" th:text="${suggestion} + ',' " ></a>?</p>
+  </div>
+</div>
+</body>
+</html>
