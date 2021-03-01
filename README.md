@@ -30,6 +30,7 @@ https://github.com/Esubalew-github/assessment
 CREATE DATABASE test_db
 ```
 In the above command, test_db is a name for the database as an example.
+
 3. Run these sql script files and create tables. For PostgreSQL database use
 
 ```
