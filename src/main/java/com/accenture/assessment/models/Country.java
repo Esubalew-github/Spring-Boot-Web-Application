@@ -8,7 +8,11 @@ import java.util.List;
 @Entity
 @Table(name = "countries")
 public class Country implements java.io.Serializable {
-  static final long serialVersionUID=0;
+  /**
+   *
+   */
+  private static final long serialVersionUID = 1L;
+
   @Id
   private Long id;
 
