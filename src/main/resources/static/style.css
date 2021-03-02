@@ -11,13 +11,7 @@ input {
 table {
   border-collapse: collapse;
 }
-
-table td,
-table th {
-  border: 1px solid #000;
-  padding: 0.2em 0.5em;
-}
-
-table th {
-  background-color: #CCC;
+td, th {
+  border: 1px solid #999;
+  padding: 0.5rem;
 }
