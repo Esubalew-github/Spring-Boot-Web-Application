@@ -9,7 +9,11 @@ import java.util.List;
 @Table(name = "airports")
 
 public class Airport implements java.io.Serializable {
-  static final long serialVersionUID=0;
+   /**
+   *
+   */
+  private static final long serialVersionUID = 1L;
+  
   @Id
   private Long id;
 
